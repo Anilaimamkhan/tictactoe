@@ -1,0 +1,127 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #dbeafe, #fef9c3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.board-wrapper {
+  text-align: center;
+  padding: 20px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1s ease-in;
+    max-width: 95vw;
+  width: 400px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.game-title {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  color: #4f46e5;
+}
+
+.boardContainer {
+  margin-top: 10px;
+}
+
+.board-row {
+  display: flex;
+  justify-content: center;
+  margin: 5px 0;
+    flex-wrap: wrap;
+
+}
+
+.square {
+  width: 80px;
+  height: 80px;
+  margin: 5px;
+  font-size: 2rem;
+  border: 2px solid #4b5563;
+  background-color: #f1f5f9;
+  border-radius: 10px;
+  transition: background 0.3s, transform 0.2s ease;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.square:hover {
+  background-color: #dbeafe;
+  transform: scale(1.05);
+}
+
+.turn-indicator {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #334155;
+}
+
+.turn-indicator span {
+  font-weight: bold;
+  color: #ef4444;
+}
+
+.winner-message {
+  font-size: 1.5rem;
+  color: #16a34a;
+  margin-bottom: 15px;
+}
+
+.play-again-btn {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #3b82f6;
+  border: none;
+  color: white;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.play-again-btn:hover {
+  background-color: #2563eb;
+}
+
+@media screen and (max-width: 500px) {
+  .square {
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+  }
+
+  .game-title {
+    font-size: 1.8rem;
+  }
+
+  .turn-indicator {
+    font-size: 1rem;
+  }
+
+  .winner-message {
+    font-size: 1.2rem;
+  }
+
+  .play-again-btn {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+}
